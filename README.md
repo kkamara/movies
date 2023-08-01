@@ -1,5 +1,7 @@
 <img src="https://github.com/kkamara/useful/raw/main/MainClass.png" alt="MainClass.png" width=""/>
 
+<img src="https://github.com/kkamara/useful/raw/main/movies.png" alt="movies.png" width=""/>
+
 # Movies [![API](https://github.com/kkamara/movies/actions/workflows/build.yml/badge.svg)](https://github.com/kkamara/movies/actions/workflows/build.yml)
 
 (31-Jul-2023) With Laravel 10 we query the movies endpoint at www.rapidapi.com/rapidapi/api/movie-database-alternative/
