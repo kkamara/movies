@@ -86,7 +86,7 @@ php artisan migrate --seed
 Install javascript required packages.
 
 ```bash
-yarn && yarn dev
+yarn && yarn build
 ```
 
 ## Usage
