@@ -4,6 +4,8 @@
 
 (31-Jul-2023) With Laravel 10 we query the movies endpoint at www.rapidapi.com/rapidapi/api/movie-database-alternative/
 
+* [Tinker](#tinker)
+
 * [Installation](#installation)
 
 * [Usage](#usage)
@@ -17,6 +19,37 @@
 * [Contributing](#contributing)
 
 * [License](#license)
+
+## Tinker
+
+```bash
+php artisan tinker
+> $m = new \App\Models\Movie;
+= App\Models\Movie {#6216}
+> $m->searchApi('Avengers')
+= {#6230
+    +"Search": [
+      {#6227
+        +"Title": "The Avengers",
+        +"Year": "2012",
+        +"imdbID": "tt0848228",
+        +"Type": "movie",
+        +"Poster": "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+      },
+      {#6235
+        +"Title": "Avengers: Endgame",
+        +"Year": "2019",
+        +"imdbID": "tt4154796",
+        +"Type": "movie",
+        +"Poster": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
+      },
+      {#6240
+        +"Title": "Avengers: Infinity War",
+        +"Year": "2018",
+        +"imdbID": "tt4154756",
+        +"Type": "movie",
+    ...
+```
 
 ## Installation
 
