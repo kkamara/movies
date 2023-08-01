@@ -9,7 +9,6 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     <!-- Favicons -->
-    <link href="{{ asset('theme/img/favicon.png') }}" rel="icon">
     <link href="{{ asset('theme/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -60,7 +59,7 @@
                     </ul>
                     </li>
                     <li><a class="nav-link scrollto" href="javascript:;">Contact</a></li>
-                    <li><a class="getstarted scrollto" href="javascript:;">Get Started</a></li>
+                    <li><a class="getstarted scrollto" href="javascript:;">Login or Signup</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
