@@ -20,7 +20,7 @@
 
 ## Installation
 
-* [PhP and MySQL](https://www.apachefriends.org/download.html)
+* [PHP and MySQL](https://www.apachefriends.org/download.html)
 * [Yarn](https://yarnpkg.com/getting-started/install) (can be installed with `npm i -g yarn`)
 * [https://laravel.com/docs/10.x/installation](https://laravel.com/docs/10.x/installation)
 * [https://laravel.com/docs/10.x/mix#main-content](https://laravel.com/docs/10.x/mix#main-content)
