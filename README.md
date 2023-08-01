@@ -1,4 +1,4 @@
-![node-react-boilerplate.png](https://github.com/kkamara/useful/blob/main/node-react-boilerplate.png?raw=true)
+<img src="https://github.com/kkamara/useful/raw/main/MainClass.png" alt="MainClass.png" width=""/>
 
 # Movies [![API](https://github.com/kkamara/movies/actions/workflows/build.yml/badge.svg)](https://github.com/kkamara/movies/actions/workflows/build.yml)
 
