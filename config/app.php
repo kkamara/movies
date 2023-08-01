@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
 return [
+    'movies_key' => env('MOVIES_KEY'),
+
+    'movies_api' => env('MOVIES_API'),
 
     /*
     |--------------------------------------------------------------------------
