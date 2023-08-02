@@ -31,30 +31,30 @@
                         <form action="{{ route('loginAction') }}" method="post">
                             @csrf
                             <div class="form-group">
-                                <label for="email">Email</label>
+                                <label for="login_email">Email</label>
                                 <input 
                                     type="text"
                                     name='login_email'
-                                    class='form-control @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('email'))) is-invalid @endif'
+                                    class='form-control @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('login_email'))) is-invalid @endif'
                                     placeholder="Email address"
                                 />
-                                @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('email')))
-                                    <div id="validationEmailFeedback">
-                                        {{ $errors->login->first('email') }}
+                                @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('login_email')))
+                                    <div id="validationLoginEmailFeedback">
+                                        {{ $errors->login->first('login_email') }}
                                     </div>
                                 @endif
                             </div>
                             <div class="form-group">
-                                <label for="password">Password</label>
+                                <label for="login_password">Password</label>
                                 <input 
                                     type="text"
                                     name='login_password'
-                                    class='form-control @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('password'))) is-invalid @endif'
+                                    class='form-control @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('login_password'))) is-invalid @endif'
                                     placeholder="Password"
                                 />
-                                @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('password')))
-                                    <div id="validationEmailFeedback">
-                                        {{ $errors->login->first('password') }}
+                                @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('login_password')))
+                                    <div id="validationLoginPasswordFeedback">
+                                        {{ $errors->login->first('login_password') }}
                                     </div>
                                 @endif
                             </div>
@@ -71,86 +71,86 @@
                         <h3 class='text-center'>Signup</h3>
                         <form action="" method="post">
                             <div class="form-group">
-                                <label for="first_name">First name</label>
+                                <label for="register_first_name">First name</label>
                                 <input
                                     type="text"
                                     name='register_first_name'
-                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('first_name'))) is-invalid @endif'
+                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_first_name'))) is-invalid @endif'
                                     placeholder="First name"
                                 />
-                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('first_name')))
-                                    <div id="validationEmailFeedback">
-                                        {{ $errors->register->first('first_name') }}
+                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_first_name')))
+                                    <div id="validationRegisterFirstNameFeedback">
+                                        {{ $errors->register->first('register_first_name') }}
                                     </div>
                                 @endif
                             </div>
                             <div class="form-group">
-                                <label for="last_name">Last name</label>
+                                <label for="register_last_name">Last name</label>
                                 <input
                                     type="text"
                                     name='register_last_name'
-                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('last_name'))) is-invalid @endif'
+                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_last_name'))) is-invalid @endif'
                                     placeholder="Last name"
                                 />
-                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('last_name')))
-                                    <div id="validationEmailFeedback">
-                                        {{ $errors->register->first('last_name') }}
+                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_last_name')))
+                                    <div id="validationLastNameFeedback">
+                                        {{ $errors->register->first('register_last_name') }}
                                     </div>
                                 @endif
                             </div>
                             <div class="form-group">
-                                <label for="email">Email</label>
+                                <label for="register_email">Email</label>
                                 <input
                                     type="text"
                                     name='register_email'
-                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('email'))) is-invalid @endif'
+                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_email'))) is-invalid @endif'
                                     placeholder="Email address"
                                 />
-                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('email')))
-                                    <div id="validationEmailFeedback">
-                                        {{ $errors->register->first('email') }}
+                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_email')))
+                                    <div id="validationRegisterEmailFeedback">
+                                        {{ $errors->register->first('register_email') }}
                                     </div>
                                 @endif
                             </div>
                             <div class="form-group">
-                                <label for="email">Email confirmation</label>
+                                <label for="register_email_confirmation">Email confirmation</label>
                                 <input
                                     type="text"
                                     name='register_email_confirmation'
-                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('email_confirmation'))) is-invalid @endif'
+                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_email_confirmation'))) is-invalid @endif'
                                     placeholder="Email confirmation"
                                 />
-                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('email_confirmation')))
-                                    <div id="validationRegisterEmailFeedback">
-                                        {{ $errors->register->first('email_confirmation') }}
+                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_email_confirmation')))
+                                    <div id="validationRegisterEmailConfirmationFeedback">
+                                        {{ $errors->register->first('register_email_confirmation') }}
                                     </div>
                                 @endif
                             </div>
                             <div class="form-group">
-                                <label for="password">Password</label>
+                                <label for="register_password">Password</label>
                                 <input 
                                     type="text"
                                     name='register_password'
-                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('password'))) is-invalid @endif'
+                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_password'))) is-invalid @endif'
                                     placeholder="Password"
                                 />
-                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('password')))
+                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_password')))
                                     <div id="validationRegisterPasswordFeedback">
-                                        {{ $errors->register->first('password') }}
+                                        {{ $errors->register->first('register_password') }}
                                     </div>
                                 @endif
                             </div>
                             <div class="form-group">
-                                <label for="password">Password confirmation</label>
+                                <label for="register_password">Password confirmation</label>
                                 <input 
                                     type="text"
                                     name='register_password'
-                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('password_confirmation'))) is-invalid @endif'
+                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_password_confirmation'))) is-invalid @endif'
                                     placeholder="Password confirmation"
                                 />
-                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('password_confirmation')))
+                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_password_confirmation')))
                                     <div id="validationRegisterPasswordConfirmationFeedback">
-                                        {{ $errors->register->first('password_confirmation') }}
+                                        {{ $errors->register->first('register_password_confirmation') }}
                                     </div>
                                 @endif
                             </div>

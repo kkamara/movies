@@ -22,7 +22,7 @@ class AuthTest extends TestCase
         $message = 'The email field is required.';
         
         $errors = new MessageBag();
-        $errors->add('email', $message);
+        $errors->add('login_email', $message);
 
         $view = $this->withViewErrors($errors->toArray(), 'login')
             ->view('auth.login', ['title' => $this->title]);
@@ -35,7 +35,7 @@ class AuthTest extends TestCase
         $message = 'The password field is required.';
         
         $errors = new MessageBag();
-        $errors->add('password', $message);
+        $errors->add('login_password', $message);
 
         $view = $this->withViewErrors($errors->toArray(), 'login')
             ->view('auth.login', ['title' => $this->title]);
@@ -48,7 +48,7 @@ class AuthTest extends TestCase
         $message = 'The first name field is required.';
         
         $errors = new MessageBag();
-        $errors->add('first_name', $message);
+        $errors->add('register_first_name', $message);
 
         $view = $this->withViewErrors($errors->toArray(), 'register')
             ->view('auth.login', ['title' => $this->title]);
@@ -61,7 +61,7 @@ class AuthTest extends TestCase
         $message = 'The last name field is required.';
         
         $errors = new MessageBag();
-        $errors->add('last_name', $message);
+        $errors->add('register_last_name', $message);
 
         $view = $this->withViewErrors($errors->toArray(), 'register')
             ->view('auth.login', ['title' => $this->title]);
@@ -74,7 +74,7 @@ class AuthTest extends TestCase
         $message = 'The email field is required.';
         
         $errors = new MessageBag();
-        $errors->add('email', $message);
+        $errors->add('register_email', $message);
 
         $view = $this->withViewErrors($errors->toArray(), 'register')
             ->view('auth.login', ['title' => $this->title]);
@@ -87,7 +87,7 @@ class AuthTest extends TestCase
         $message = 'The email confirmation field is required.';
         
         $errors = new MessageBag();
-        $errors->add('email_confirmation', $message);
+        $errors->add('register_email_confirmation', $message);
 
         $view = $this->withViewErrors($errors->toArray(), 'register')
             ->view('auth.login', ['title' => $this->title]);
@@ -100,7 +100,7 @@ class AuthTest extends TestCase
         $message = 'The password field is required.';
         
         $errors = new MessageBag();
-        $errors->add('password', $message);
+        $errors->add('register_password', $message);
 
         $view = $this->withViewErrors($errors->toArray(), 'register')
             ->view('auth.login', ['title' => $this->title]);
@@ -113,7 +113,7 @@ class AuthTest extends TestCase
         $message = 'The password confirmation field is required.';
         
         $errors = new MessageBag();
-        $errors->add('password_confirmation', $message);
+        $errors->add('register_password_confirmation', $message);
 
         $view = $this->withViewErrors($errors->toArray(), 'register')
             ->view('auth.login', ['title' => $this->title]);
