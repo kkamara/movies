@@ -73,4 +73,6 @@ jobs:
       - name: curl to localhost
         run: curl localhost:8000 &
       - name: Run Unit Tests
-        run: php artisan test
+        run: php artisan test --testsuite=Unit --stop-on-failure
+      - name: Run Feature Tests
+        run: php artisan test --testsuite=Feature --stop-on-failure
