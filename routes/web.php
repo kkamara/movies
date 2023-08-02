@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,5 @@ Route::post('/auth/login', [LoginController::class, 'loginAction'])
     ->name('loginAction');
 Route::get('/auth/logout', [LoginController::class, 'logoutAction'])
     ->name('logoutAction');
+Route::post('/auth/register', [RegisterController::class, 'registerAction'])
+    ->name('registerAction');

@@ -24,8 +24,6 @@ class RegisterActionTest extends TestCase
         $res->assertStatus(302)
             ->assertRedirect($uri='/');
         
-        $this->assertDatabaseHas('users', [
-            'email' => $email,
-        ]);
+        $this->assertDatabaseHas('users', compact('email'));
     }
 }
