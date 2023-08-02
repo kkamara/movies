@@ -9,8 +9,9 @@ class AuthTest extends TestCase
 {
     public function test_a_login_view_can_be_rendered(): void
     {
-        $view = $this->view('auth.login', ['title' => 'Login or Signup']);
+        $title = 'Login or Signup';
+        $view = $this->view('auth.login', compact('title'));
  
-        $view->assertSee('Login or Signup');
+        $view->assertSee($title);
     }
 }
