@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 // use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\MessageBag;
 use Tests\TestCase;
 
 class AuthTest extends TestCase
@@ -13,5 +14,19 @@ class AuthTest extends TestCase
         $view = $this->view('auth.login', compact('title'));
  
         $view->assertSee($title);
+    }
+    
+    public function test_login_email_view_validation(): void
+    {
+        $title = 'Login or Signup';
+        $message = 'Email not recognised.';
+        
+        $errors = new MessageBag();
+        $errors->add('email', $message);
+
+        $view = $this->withViewErrors($errors->toArray(), 'login')
+            ->view('auth.login', compact('title'));
+         
+        $view->assertSee($message);
     }
 }

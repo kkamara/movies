@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('styles')
+    @vite('resources/css/login.css')
+@stop
+
 @section('content')
 
     <main id="main">
@@ -18,12 +22,49 @@
 
             </div>
         </section><!-- End Breadcrumbs -->
-
+{{-- {{dd($errors->login->count(), $errors->login->first('email'), strlen($errors->login->first('email')))}} --}}
         <section class="inner-page">
             <div class="container">
-            <p>
-                Example inner page template
-            </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class='text-center'>Login</h3>
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input 
+                                    type="text"
+                                    name='email'
+                                    class='form-control invalid @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('email'))) is-invalid @endif'
+                                    placeholder="Email address"
+                                />
+                                @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('email')))
+                                    <div id="validationEmailFeedback">
+                                        {{ $errors->login->first('email') }}
+                                    </div>
+                                @endif
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input 
+                                    type="text"
+                                    name='password'
+                                    class='form-control'
+                                    placeholder="Password"
+                                />
+                            </div>
+                            <div class="login-btn-container">
+                                <input 
+                                    class='btn btn-md btn-success'
+                                    type="submit" 
+                                    value="Login"
+                                />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class='text-center'>Signup</h3>
+                    </div>
+                </div>
             </div>
         </section>
 
