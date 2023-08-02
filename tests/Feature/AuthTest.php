@@ -19,10 +19,24 @@ class AuthTest extends TestCase
     public function test_login_email_view_validation(): void
     {
         $title = 'Login or Signup';
-        $message = 'Email not recognised.';
+        $message = 'The email field is required.';
         
         $errors = new MessageBag();
         $errors->add('email', $message);
+
+        $view = $this->withViewErrors($errors->toArray(), 'login')
+            ->view('auth.login', compact('title'));
+         
+        $view->assertSee($message);
+    }
+    
+    public function test_login_password_view_validation(): void
+    {
+        $title = 'Login or Signup';
+        $message = 'The password field is required.';
+        
+        $errors = new MessageBag();
+        $errors->add('password', $message);
 
         $view = $this->withViewErrors($errors->toArray(), 'login')
             ->view('auth.login', compact('title'));

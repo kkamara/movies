@@ -34,7 +34,7 @@
                                 <input 
                                     type="text"
                                     name='email'
-                                    class='form-control invalid @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('email'))) is-invalid @endif'
+                                    class='form-control @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('email'))) is-invalid @endif'
                                     placeholder="Email address"
                                 />
                                 @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('email')))
@@ -48,9 +48,14 @@
                                 <input 
                                     type="text"
                                     name='password'
-                                    class='form-control'
+                                    class='form-control @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('password'))) is-invalid @endif'
                                     placeholder="Password"
                                 />
+                                @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('password')))
+                                    <div id="validationEmailFeedback">
+                                        {{ $errors->login->first('password') }}
+                                    </div>
+                                @endif
                             </div>
                             <div class="login-btn-container">
                                 <input 
