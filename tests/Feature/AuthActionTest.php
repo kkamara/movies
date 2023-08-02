@@ -8,10 +8,14 @@ use Tests\TestCase;
 
 class AuthActionTest extends TestCase
 {
-    public function test_a_login_view_can_be_rendered(): void
+    public function test_a_login_action_can_be_done(): void
     {
-        $res = $this->get('/');
+        $res = $this->post('/auth/login', [
+            'email' => 'admin@mail.com',
+            'password' => 'secret',
+        ]);
  
-        $res->assertStatus(200);
+        $res->assertStatus(200)
+            ->assertRedirect(('/'));        
     }
 }
