@@ -22,7 +22,7 @@ class LoginController extends Controller
 
     public function loginAction(Request $request) {
         $validator = Validator::make($request->all(), [
-            'login_email' => 'required|exists:users,email',
+            'login_email' => 'required|email|exists:users,email',
             'login_password' => 'required',
         ]);
 
