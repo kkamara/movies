@@ -68,6 +68,99 @@
                     </div>
                     <div class="col-md-6">
                         <h3 class='text-center'>Signup</h3>
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <label for="first_name">First name</label>
+                                <input
+                                    type="text"
+                                    name='first_name'
+                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('first_name'))) is-invalid @endif'
+                                    placeholder="First name"
+                                />
+                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('first_name')))
+                                    <div id="validationEmailFeedback">
+                                        {{ $errors->register->first('first_name') }}
+                                    </div>
+                                @endif
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Last name</label>
+                                <input
+                                    type="text"
+                                    name='last_name'
+                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('last_name'))) is-invalid @endif'
+                                    placeholder="Last name"
+                                />
+                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('last_name')))
+                                    <div id="validationEmailFeedback">
+                                        {{ $errors->register->first('last_name') }}
+                                    </div>
+                                @endif
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input
+                                    type="text"
+                                    name='email'
+                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('email'))) is-invalid @endif'
+                                    placeholder="Email address"
+                                />
+                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('email')))
+                                    <div id="validationEmailFeedback">
+                                        {{ $errors->register->first('email') }}
+                                    </div>
+                                @endif
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email confirmation</label>
+                                <input
+                                    type="text"
+                                    name='email_confirmation'
+                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('email_confirmation'))) is-invalid @endif'
+                                    placeholder="Email confirmation"
+                                />
+                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('email_confirmation')))
+                                    <div id="validationRegisterEmailFeedback">
+                                        {{ $errors->register->first('email_confirmation') }}
+                                    </div>
+                                @endif
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input 
+                                    type="text"
+                                    name='password'
+                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('password'))) is-invalid @endif'
+                                    placeholder="Password"
+                                />
+                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('password')))
+                                    <div id="validationRegisterPasswordFeedback">
+                                        {{ $errors->register->first('password') }}
+                                    </div>
+                                @endif
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password confirmation</label>
+                                <input 
+                                    type="text"
+                                    name='password'
+                                    class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('password_confirmation'))) is-invalid @endif'
+                                    placeholder="Password confirmation"
+                                />
+                                @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('password_confirmation')))
+                                    <div id="validationRegisterPasswordConfirmationFeedback">
+                                        {{ $errors->register->first('password_confirmation') }}
+                                    </div>
+                                @endif
+                            </div>
+                            <div class="login-btn-container">
+                                <input 
+                                    class='btn btn-md btn-success'
+                                    type="submit" 
+                                    value="Register"
+                                />
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
