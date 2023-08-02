@@ -18,4 +18,16 @@ class AuthActionTest extends TestCase
         $res->assertStatus(302)
             ->assertRedirect($uri='/');        
     }
+
+    public function test_a_login_action_fails_with_no_email(): void
+    {
+        $res = $this->post('/auth/login', [
+            'email' => '',
+            'password' => 'invalidpassword',
+        ]);
+ 
+        $res->assertInvalid([
+            'login_email' => 'The login email field is required.',
+        ], 'login');
+    }
 }
