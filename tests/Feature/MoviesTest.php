@@ -13,4 +13,11 @@ class MoviesTest extends TestCase
  
         $view->assertSee('Home');
     }
+
+    public function test_a_login_view_can_be_rendered(): void
+    {
+        $view = $this->view('auth.login', ['title' => 'Login or Signup']);
+ 
+        $view->assertSee('Login or Signup');
+    }
 }
