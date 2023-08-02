@@ -1,12 +1,11 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\Auth;
 
 // use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\MessageBag;
 use Tests\TestCase;
 
-class AuthActionTest extends TestCase
+class LoginActionTest extends TestCase
 {
     public function test_a_login_action_can_be_done(): void
     {
