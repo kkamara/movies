@@ -11,11 +11,11 @@ class AuthActionTest extends TestCase
     public function test_a_login_action_can_be_done(): void
     {
         $res = $this->post('/auth/login', [
-            'email' => 'admin@mail.com',
+            'email' => 'admin@example.com',
             'password' => 'secret',
         ]);
  
-        $res->assertStatus(200)
-            ->assertRedirect(('/'));        
+        $res->assertStatus(302)
+            ->assertRedirect($uri='/');        
     }
 }

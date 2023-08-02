@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [MovieController::class, 'index'])->name('home');
 Route::get('/auth/login', [LoginController::class, 'login'])->name('login');
+Route::post('/auth/login', [LoginController::class, 'loginAction'])
+    ->name('loginAction');
+Route::get('/auth/logout', [LoginController::class, 'logoutAction'])
+    ->name('logoutAction');

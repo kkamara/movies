@@ -31,7 +31,11 @@
                 </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="javascript:;">Contact</a></li>
-                <li><a class="getstarted scrollto" href="{{ route('login') }}">Login or Signup</a></li>
+                @if (!Auth::check())
+                    <li><a class="getstarted scrollto" href="{{ route('login') }}">Login or Signup</a></li>
+                @else
+                    <li><a class="getstarted scrollto" href="{{ route('logoutAction') }}">Logout</a></li>
+                @endif
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->

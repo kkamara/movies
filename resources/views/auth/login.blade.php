@@ -28,12 +28,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h3 class='text-center'>Login</h3>
-                        <form action="" method="post">
+                        <form action="{{ route('loginAction') }}" method="post">
+                            @csrf
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input 
                                     type="text"
-                                    name='email'
+                                    name='login_email'
                                     class='form-control @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('email'))) is-invalid @endif'
                                     placeholder="Email address"
                                 />
@@ -47,7 +48,7 @@
                                 <label for="password">Password</label>
                                 <input 
                                     type="text"
-                                    name='password'
+                                    name='login_password'
                                     class='form-control @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('password'))) is-invalid @endif'
                                     placeholder="Password"
                                 />
@@ -73,7 +74,7 @@
                                 <label for="first_name">First name</label>
                                 <input
                                     type="text"
-                                    name='first_name'
+                                    name='register_first_name'
                                     class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('first_name'))) is-invalid @endif'
                                     placeholder="First name"
                                 />
@@ -87,7 +88,7 @@
                                 <label for="last_name">Last name</label>
                                 <input
                                     type="text"
-                                    name='last_name'
+                                    name='register_last_name'
                                     class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('last_name'))) is-invalid @endif'
                                     placeholder="Last name"
                                 />
@@ -101,7 +102,7 @@
                                 <label for="email">Email</label>
                                 <input
                                     type="text"
-                                    name='email'
+                                    name='register_email'
                                     class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('email'))) is-invalid @endif'
                                     placeholder="Email address"
                                 />
@@ -115,7 +116,7 @@
                                 <label for="email">Email confirmation</label>
                                 <input
                                     type="text"
-                                    name='email_confirmation'
+                                    name='register_email_confirmation'
                                     class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('email_confirmation'))) is-invalid @endif'
                                     placeholder="Email confirmation"
                                 />
@@ -129,7 +130,7 @@
                                 <label for="password">Password</label>
                                 <input 
                                     type="text"
-                                    name='password'
+                                    name='register_password'
                                     class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('password'))) is-invalid @endif'
                                     placeholder="Password"
                                 />
@@ -143,7 +144,7 @@
                                 <label for="password">Password confirmation</label>
                                 <input 
                                     type="text"
-                                    name='password'
+                                    name='register_password'
                                     class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('password_confirmation'))) is-invalid @endif'
                                     placeholder="Password confirmation"
                                 />
