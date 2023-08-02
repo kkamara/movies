@@ -27,7 +27,8 @@ class LoginController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return back()->withErrors($validator, 'login');
+            return back()->withErrors($validator, 'login')
+                ->withInput();
         }
 
         if (
@@ -38,7 +39,8 @@ class LoginController extends Controller
         ) {
             return back()->withErrors([
                 'login_email' => 'Invalid login combination',
-            ], 'login');
+            ], 'login')
+                ->withInput();
         }
 
         return redirect()->route('home');

@@ -37,6 +37,7 @@
                                     name='login_email'
                                     class='form-control @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('login_email'))) is-invalid @endif'
                                     placeholder="Email address"
+                                    value="{{ old('login_email') }}"
                                 />
                                 @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('login_email')))
                                     <div id="validationLoginEmailFeedback">
@@ -51,6 +52,7 @@
                                     name='login_password'
                                     class='form-control @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('login_password'))) is-invalid @endif'
                                     placeholder="Password"
+                                    value="{{ old('login_password') }}"
                                 />
                                 @if(isset($errors) && $errors->login->count() && strlen($errors->login->first('login_password')))
                                     <div id="validationLoginPasswordFeedback">
@@ -77,6 +79,7 @@
                                     name='register_first_name'
                                     class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_first_name'))) is-invalid @endif'
                                     placeholder="First name"
+                                    value="{{ old('register_first_name') }}"
                                 />
                                 @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_first_name')))
                                     <div id="validationRegisterFirstNameFeedback">
@@ -91,6 +94,7 @@
                                     name='register_last_name'
                                     class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_last_name'))) is-invalid @endif'
                                     placeholder="Last name"
+                                    value="{{ old('register_last_name') }}"
                                 />
                                 @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_last_name')))
                                     <div id="validationLastNameFeedback">
@@ -105,6 +109,7 @@
                                     name='register_email'
                                     class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_email'))) is-invalid @endif'
                                     placeholder="Email address"
+                                    value="{{ old('register_email') }}"
                                 />
                                 @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_email')))
                                     <div id="validationRegisterEmailFeedback">
@@ -119,6 +124,7 @@
                                     name='register_email_confirmation'
                                     class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_email_confirmation'))) is-invalid @endif'
                                     placeholder="Email confirmation"
+                                    value="{{ old('register_email_confirmation') }}"
                                 />
                                 @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_email_confirmation')))
                                     <div id="validationRegisterEmailConfirmationFeedback">
@@ -133,6 +139,7 @@
                                     name='register_password'
                                     class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_password'))) is-invalid @endif'
                                     placeholder="Password"
+                                    value="{{ old('register_password') }}"
                                 />
                                 @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_password')))
                                     <div id="validationRegisterPasswordFeedback">
@@ -144,9 +151,10 @@
                                 <label for="register_password">Password confirmation</label>
                                 <input 
                                     type="text"
-                                    name='register_password'
+                                    name='register_password_confirmation'
                                     class='form-control @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_password_confirmation'))) is-invalid @endif'
                                     placeholder="Password confirmation"
+                                    value="{{ old('register_password_confirmation') }}"
                                 />
                                 @if(isset($errors) && $errors->register->count() && strlen($errors->register->first('register_password_confirmation')))
                                     <div id="validationRegisterPasswordConfirmationFeedback">
