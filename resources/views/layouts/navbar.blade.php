@@ -31,7 +31,7 @@
                 </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="javascript:;">Contact</a></li>
-                <li><a class="getstarted scrollto" href="javascript:;">Login or Signup</a></li>
+                <li><a class="getstarted scrollto" href="{{ route('login') }}">Login or Signup</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
