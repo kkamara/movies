@@ -89,6 +89,8 @@ Install javascript required packages.
 
 ```bash
 yarn && yarn build
+# Do `yarn dev` during development to see live changes
+# of your blade and js and css/scss dependencies with vite.config.js
 ```
 
 ## Usage
