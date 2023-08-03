@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('/movies/search', [MovieController::class, 'searchMovies'])
+    ->name('searchMovies');
 Route::get('/', [MovieController::class, 'index'])->name('home');
 Route::get('/auth/login', [LoginController::class, 'login'])->name('login');
 Route::post('/auth/login', [LoginController::class, 'loginAction'])
