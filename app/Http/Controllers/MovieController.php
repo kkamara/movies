@@ -37,6 +37,7 @@ class MovieController extends Controller
 
         $query = htmlspecialchars($request->get('query'));
         $movies = $this->movie->searchApi($query);
+        session()->flashInput($request->input());
         return view('home', compact('title', 'movies'));
     }
 }

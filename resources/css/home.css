@@ -1,0 +1,8 @@
+.movies-submit-btn-container {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.poster {
+    max-width: 255px;
+}
